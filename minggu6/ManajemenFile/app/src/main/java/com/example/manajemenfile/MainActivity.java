@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         //Permission to access external storage
         ActivityCompat.requestPermissions(this, new String []{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
         String info = editText.getText().toString();
-        File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+        File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
         File myfile = new File(folder, "myData1.txt");//Filename
         writeData(myfile, info);
         editText.setText("");
